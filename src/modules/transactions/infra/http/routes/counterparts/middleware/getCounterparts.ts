@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import ListCounterpartService from '../../../../../services/ListCounterpartService';
+import ListCounterpartService from '../../../../../services/counterparts/ListCounterpartService';
 import ICounterpart from '../../../../../entities/ICounterpart';
 
 export default async (req: Request, res: Response): Promise<void> => {

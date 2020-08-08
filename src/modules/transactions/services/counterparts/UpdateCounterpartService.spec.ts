@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
-import FakeCounterpartsRepository from '../repositories/FakeCounterpartsRepository';
+import FakeCounterpartsRepository from '../../repositories/FakeCounterpartsRepository';
 import UpdateCounterpartService from './UpdateCounterpartService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('Update Counterpart Service', () => {
   let counterpartsRepository: FakeCounterpartsRepository;

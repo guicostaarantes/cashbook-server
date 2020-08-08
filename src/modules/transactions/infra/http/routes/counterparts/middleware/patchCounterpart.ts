@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import UpdateCounterpartService from '../../../../../services/UpdateCounterpartService';
+import UpdateCounterpartService from '../../../../../services/counterparts/UpdateCounterpartService';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { id: counterpartId } = req.params;

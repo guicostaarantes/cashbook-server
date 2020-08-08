@@ -1,6 +1,6 @@
-import FakeCounterpartsRepository from '../repositories/FakeCounterpartsRepository';
+import FakeCounterpartsRepository from '../../repositories/FakeCounterpartsRepository';
 import CreateCounterpartService from './CreateCounterpartService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('Create Counterpart Service', () => {
   let counterpartsRepository: FakeCounterpartsRepository;
