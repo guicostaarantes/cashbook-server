@@ -5,6 +5,7 @@
   "scripts": {
     "dev:start": "env-cmd -f development.env ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
     "dev:typeorm": "env-cmd -f development.env ts-node-dev ./node_modules/typeorm/cli.js",
+    "lint": "eslint \"src/**/*.ts\"",
     "test": "env-cmd -f test.env jest",
     "test:coverage": "env-cmd -f test.env jest --coverage",
     "staging:build": "env-cmd -f staging.env tsc",
