@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import UpdateAccountService from '../../../../../services/UpdateAccountService';
+import UpdateAccountService from '../../../../../services/accounts/UpdateAccountService';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { id: accountId } = req.params;

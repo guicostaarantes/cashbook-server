@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
-import FakeAccountsRepository from '../repositories/FakeAccountsRepository';
+import FakeAccountsRepository from '../../repositories/FakeAccountsRepository';
 import ListAccountService from './ListAccountService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('List Account Service', () => {
   let accountsRepository: FakeAccountsRepository;

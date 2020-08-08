@@ -1,6 +1,6 @@
-import FakeAccountsRepository from '../repositories/FakeAccountsRepository';
+import FakeAccountsRepository from '../../repositories/FakeAccountsRepository';
 import CreateAccountService from './CreateAccountService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('Create Account Service', () => {
   let accountsRepository: FakeAccountsRepository;

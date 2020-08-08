@@ -1,9 +1,9 @@
 import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
-import AppError from '../../../shared/errors/AppError';
-import IAccount from '../entities/IAccount';
-import { IAccountsRepository } from '../repositories/IAccountsRepository';
+import AppError from '../../../../shared/errors/AppError';
+import IAccount from '../../entities/IAccount';
+import { IAccountsRepository } from '../../repositories/IAccountsRepository';
 
 interface IServiceRequest {
   name: string;

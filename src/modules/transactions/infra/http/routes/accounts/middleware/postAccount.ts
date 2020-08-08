@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import CreateAccountService from '../../../../../services/CreateAccountService';
+import CreateAccountService from '../../../../../services/accounts/CreateAccountService';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { name } = req.body;
