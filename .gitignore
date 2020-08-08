@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+
+*.env
+!example.env
+
+tmp/*
+!tmp/.gitkeep
+
+fakeCDN/*
+!fakeCDN/.gitkeep
+
+coverage
