@@ -36,7 +36,7 @@ class UpdateAccountService {
     const findByName =
       name && (await this.accountsRepository.findByName(name, ['id']));
 
-    if (findByName) {
+    if (findByName && findByName.id !== accountId) {
       throw new AppError('There is another account with the same name.', 400);
     }
 
