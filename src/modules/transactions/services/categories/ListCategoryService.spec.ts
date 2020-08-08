@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
-import FakeCategoriesRepository from '../repositories/FakeCategoriesRepository';
+import FakeCategoriesRepository from '../../repositories/FakeCategoriesRepository';
 import ListCategoryService from './ListCategoryService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('List Category Service', () => {
   let categoriesRepository: FakeCategoriesRepository;

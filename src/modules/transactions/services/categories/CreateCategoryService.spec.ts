@@ -1,6 +1,6 @@
-import FakeCategoriesRepository from '../repositories/FakeCategoriesRepository';
+import FakeCategoriesRepository from '../../repositories/FakeCategoriesRepository';
 import CreateCategoryService from './CreateCategoryService';
-import AppError from '../../../shared/errors/AppError';
+import AppError from '../../../../shared/errors/AppError';
 
 describe('Create Category Service', () => {
   let categoriesRepository: FakeCategoriesRepository;

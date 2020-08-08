@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import CreateCategoryService from '../../../../../services/CreateCategoryService';
+import CreateCategoryService from '../../../../../services/categories/CreateCategoryService';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { name } = req.body;

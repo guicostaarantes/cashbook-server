@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import ListCategoryService from '../../../../../services/ListCategoryService';
+import ListCategoryService from '../../../../../services/categories/ListCategoryService';
 import ICategory from '../../../../../entities/ICategory';
 
 export default async (req: Request, res: Response): Promise<void> => {
