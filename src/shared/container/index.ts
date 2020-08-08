@@ -13,10 +13,10 @@ import JWTokenProvider from '../providers/TokenProvider/implementations/JWTokenP
 import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementations/HandlebarsTemplateProvider';
 
 import { IUsersRepository } from '../../modules/users/repositories/IUsersRepository';
-import { IAccountsRepository } from '../../modules/accounts/repositories/IAccountsRepository';
+import { IAccountsRepository } from '../../modules/transactions/repositories/IAccountsRepository';
 
 import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
-import AccountsRepository from '../../modules/accounts/infra/database/repositories/AccountsRepository';
+import AccountsRepository from '../../modules/transactions/infra/database/repositories/AccountsRepository';
 
 // Providers
 
