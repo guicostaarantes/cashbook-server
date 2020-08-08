@@ -1,1 +1,527 @@
-{"_type":"export","__export_format":4,"__export_date":"2020-08-08T02:32:21.383Z","__export_source":"insomnia.desktop.app:v2020.2.2","resources":[{"_id":"req_3e4469cf95344fcc97eaa9b70c3e9a65","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"fullName\": \"Fulano da Silva\",\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\"\n}"},"created":1596851658836,"description":"","headers":[{"id":"pair_ef613efddf4a48ad9cb50dc3cf42573f","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1596851658836,"method":"POST","modified":1596851734580,"name":"/","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"fld_0346597250034128b4557dd8b8d27111","created":1596851647129,"description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1596851647229,"modified":1596851808061,"name":"/users","parentId":"wrk_90bba5bf67134954a59f4dfa41a7334f","_type":"request_group"},{"_id":"wrk_90bba5bf67134954a59f4dfa41a7334f","created":1596851544717,"description":"","modified":1596851544717,"name":"Cashbook App","parentId":null,"scope":null,"_type":"workspace"},{"_id":"req_af01347b16474551a06da30924655719","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"email\": \"fulano@teste.com.br\"\n}"},"created":1596851683020,"description":"","headers":[{"id":"pair_7bf89ee5c26343e0b0034c6a7e616273","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1593682981761.5,"method":"POST","modified":1596851754773,"name":"/forgot-password","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users/forgot-password","_type":"request"},{"_id":"req_711dffcf5c054d3b88cc37a1e70ff205","authentication":{"token":"{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}","type":"bearer"},"body":{},"created":1596851702726,"description":"","headers":[],"isPrivate":false,"metaSortKey":-1593682981711.5,"method":"GET","modified":1596851883744,"name":"/","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"req_d24bd743bcc346fb8406bbb33f298ada","authentication":{"token":"{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}","type":"bearer"},"body":{},"created":1596851957427,"description":"","headers":[],"isPrivate":false,"metaSortKey":-1593286897083.4375,"method":"GET","modified":1596853871615,"name":"/me","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users/me","_type":"request"},{"_id":"req_fb8a2e64c7b24217a8bd28210aa957ae","authentication":{"token":"{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}","type":"bearer"},"body":{"mimeType":"application/json","text":"{\n\t\"fullName\": \"Fulano da Silva\"\n}"},"created":1596852359948,"description":"","headers":[{"id":"pair_1a328e6fb82d44c8b1a909806549a55d","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1592890812455.375,"method":"PATCH","modified":1596853893644,"name":"/","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"req_80c3009c7c714037b88ec45a38dacbfc","authentication":{"token":"{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}","type":"bearer"},"body":{"mimeType":"multipart/form-data","params":[{"description":"","fileName":"C:\\Users\\guilherme\\OneDrive\\Documentos pessoais\\foto linkedin 2.jpg","id":"pair_c493ca9f9a2547a68dba0911216dca80","name":"avatar","type":"file","value":""}]},"created":1596853327276,"description":"","headers":[{"id":"pair_1a328e6fb82d44c8b1a909806549a55d","name":"Content-Type","value":"multipart/form-data"}],"isPrivate":false,"metaSortKey":-1591702558571.1875,"method":"PATCH","modified":1596853381698,"name":"/avatar","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users/avatar","_type":"request"},{"_id":"req_8daa10d8a929499d9e54bf9f452519fd","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMmU3NzEzYi1iNzg0LTQ4YzEtYmUzNy1mN2M5ZTJkYmYzZDEiLCJ0eXAiOiJmb3Jnb3QtcGFzc3dvcmQiLCJpYXQiOjE1ODk0OTI1MDUsImV4cCI6MTU4OTUyMTMwNX0.77elYCysvQrnrlWlbi01u9Sk2FW0Bi7bIts4XGz4noI\",\n\t\"newPassword\": \"Ful4nO*2021\"\n}"},"created":1596853401456,"description":"","headers":[{"id":"pair_1a328e6fb82d44c8b1a909806549a55d","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1591702558521.1875,"method":"PATCH","modified":1596853437441,"name":"/forgot-password","parameters":[],"parentId":"fld_0346597250034128b4557dd8b8d27111","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/users","_type":"request"},{"_id":"req_8c023af92b91453198f0771fa2b7949c","authentication":{},"body":{"mimeType":"application/json","text":"{\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\"\n}"},"created":1596851812837,"description":"","headers":[{"id":"pair_cc59a2c4e1794549be132eb8e8580c9a","name":"Content-Type","value":"application/json"}],"isPrivate":false,"metaSortKey":-1596851812837,"method":"POST","modified":1596851833191,"name":"/","parameters":[],"parentId":"fld_93fd453ebae74ffba49ffb5f6198cf47","settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingFollowRedirects":"global","settingRebuildPath":true,"settingSendCookies":true,"settingStoreCookies":true,"url":"{{ base_url  }}/sessions","_type":"request"},{"_id":"fld_93fd453ebae74ffba49ffb5f6198cf47","created":1596851667639,"description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1596851647179,"modified":1596851803388,"name":"/sessions","parentId":"wrk_90bba5bf67134954a59f4dfa41a7334f","_type":"request_group"},{"_id":"env_0a3164970f69f2aa2ffa60ae3dfb75146a25c294","color":null,"created":1596851544831,"data":{},"dataPropertyOrder":null,"isPrivate":false,"metaSortKey":1596851544831,"modified":1596851544831,"name":"Base Environment","parentId":"wrk_90bba5bf67134954a59f4dfa41a7334f","_type":"environment"},{"_id":"jar_0a3164970f69f2aa2ffa60ae3dfb75146a25c294","cookies":[],"created":1596851544834,"modified":1596851544834,"name":"Default Jar","parentId":"wrk_90bba5bf67134954a59f4dfa41a7334f","_type":"cookie_jar"},{"_id":"spc_aefb04746246447786d9ed5163df14c9","contentType":"yaml","contents":"","created":1596851544722,"fileName":"Cashbook App","modified":1596851544722,"parentId":"wrk_90bba5bf67134954a59f4dfa41a7334f","_type":"api_spec"},{"_id":"env_6e62b4a227f9476db5ba75fa934ad568","color":null,"created":1596851618576,"data":{"base_url":"http://localhost:3333"},"dataPropertyOrder":{"&":["base_url"]},"isPrivate":false,"metaSortKey":1596851618576,"modified":1596851638338,"name":"Development","parentId":"env_0a3164970f69f2aa2ffa60ae3dfb75146a25c294","_type":"environment"}]}
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-08-08T11:47:35.941Z",
+  "__export_source": "insomnia.desktop.app:v2020.3.3",
+  "resources": [
+    {
+      "_id": "req_3e4469cf95344fcc97eaa9b70c3e9a65",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"fullName\": \"Fulano da Silva\",\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\"\n}"
+      },
+      "created": 1596851658836,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_ef613efddf4a48ad9cb50dc3cf42573f",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596851658836,
+      "method": "POST",
+      "modified": 1596851734580,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0346597250034128b4557dd8b8d27111",
+      "created": 1596851647129,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1596851647229,
+      "modified": 1596851808061,
+      "name": "/users",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "created": 1596851544717,
+      "description": "",
+      "modified": 1596851544717,
+      "name": "Cashbook App",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_af01347b16474551a06da30924655719",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"fulano@teste.com.br\"\n}"
+      },
+      "created": 1596851683020,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_7bf89ee5c26343e0b0034c6a7e616273",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1593682981761.5,
+      "method": "POST",
+      "modified": 1596851754773,
+      "name": "/forgot-password",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users/forgot-password",
+      "_type": "request"
+    },
+    {
+      "_id": "req_711dffcf5c054d3b88cc37a1e70ff205",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596851702726,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1593682981711.5,
+      "method": "GET",
+      "modified": 1596886316921,
+      "name": "/",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_97cf4014a0d8432da952d4f28ac6c82f",
+          "name": "fields",
+          "value": "id,fullName,avatar"
+        }
+      ],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d24bd743bcc346fb8406bbb33f298ada",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596851957427,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1593286897083.4375,
+      "method": "GET",
+      "modified": 1596853871615,
+      "name": "/me",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users/me",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9849fa21091a4a8aa00a130be75ab45b",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596885872194,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1593088854769.4062,
+      "method": "GET",
+      "modified": 1596885896423,
+      "name": "/:id",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users/{% response 'body', 'req_711dffcf5c054d3b88cc37a1e70ff205', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_fb8a2e64c7b24217a8bd28210aa957ae",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"fullName\": \"Fulano da Silva\"\n}"
+      },
+      "created": 1596852359948,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_1a328e6fb82d44c8b1a909806549a55d",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1592890812455.375,
+      "method": "PATCH",
+      "modified": 1596853893644,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_80c3009c7c714037b88ec45a38dacbfc",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "description": "",
+            "fileName": "C:\\Users\\guilherme\\OneDrive\\Documentos pessoais\\foto linkedin 2.jpg",
+            "id": "pair_c493ca9f9a2547a68dba0911216dca80",
+            "name": "avatar",
+            "type": "file",
+            "value": ""
+          }
+        ]
+      },
+      "created": 1596853327276,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_1a328e6fb82d44c8b1a909806549a55d",
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591702558571.1875,
+      "method": "PATCH",
+      "modified": 1596853381698,
+      "name": "/avatar",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users/avatar",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8daa10d8a929499d9e54bf9f452519fd",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMmU3NzEzYi1iNzg0LTQ4YzEtYmUzNy1mN2M5ZTJkYmYzZDEiLCJ0eXAiOiJmb3Jnb3QtcGFzc3dvcmQiLCJpYXQiOjE1ODk0OTI1MDUsImV4cCI6MTU4OTUyMTMwNX0.77elYCysvQrnrlWlbi01u9Sk2FW0Bi7bIts4XGz4noI\",\n\t\"newPassword\": \"Ful4nO*2021\"\n}"
+      },
+      "created": 1596853401456,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_1a328e6fb82d44c8b1a909806549a55d",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1591702558521.1875,
+      "method": "PATCH",
+      "modified": 1596853437441,
+      "name": "/forgot-password",
+      "parameters": [],
+      "parentId": "fld_0346597250034128b4557dd8b8d27111",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/users",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8c023af92b91453198f0771fa2b7949c",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\"\n}"
+      },
+      "created": 1596851812837,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_cc59a2c4e1794549be132eb8e8580c9a",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596851812837,
+      "method": "POST",
+      "modified": 1596851833191,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_93fd453ebae74ffba49ffb5f6198cf47",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/sessions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_93fd453ebae74ffba49ffb5f6198cf47",
+      "created": 1596851667639,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1596851647216.5,
+      "modified": 1596854262493,
+      "name": "/sessions",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_f4fd5fc2c82843f6ac81debb7d9ba13f",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Conta corrente Banco X\"\n}"
+      },
+      "created": 1596854267497,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_ff2e20f8fff643af95d8e153089e09dc",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596854267497,
+      "method": "POST",
+      "modified": 1596886707404,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/accounts",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "created": 1596854245243,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1596851647204,
+      "modified": 1596854261074,
+      "name": "/accounts",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_83d691af0ad04f41ae48228418c87920",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596885813519,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596854267447,
+      "method": "GET",
+      "modified": 1596886551415,
+      "name": "/",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_8fc822d9dc8c4ecfb7b9e07e26def75b",
+          "name": "fields",
+          "value": "id,name"
+        }
+      ],
+      "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/accounts",
+      "_type": "request"
+    },
+    {
+      "_id": "req_44d2074e38bb4212b8ad870f8cd6a2fd",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596886377245,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596853040142,
+      "method": "GET",
+      "modified": 1596886616243,
+      "name": "/:id",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "name"
+        }
+      ],
+      "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/accounts/{% response 'body', 'req_83d691af0ad04f41ae48228418c87920', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e453331cada3440dbc06687e0eebdd67",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Conta corrente Banco X\"\n}"
+      },
+      "created": 1596886656340,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_66bad747d73346f1b3d4778ec1d5cac9",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596852426489.5,
+      "method": "PATCH",
+      "modified": 1596886807098,
+      "name": "/:id",
+      "parameters": [],
+      "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/accounts/{% response 'body', 'req_83d691af0ad04f41ae48228418c87920', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "env_0a3164970f69f2aa2ffa60ae3dfb75146a25c294",
+      "color": null,
+      "created": 1596851544831,
+      "data": {},
+      "dataPropertyOrder": null,
+      "isPrivate": false,
+      "metaSortKey": 1596851544831,
+      "modified": 1596851544831,
+      "name": "Base Environment",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_0a3164970f69f2aa2ffa60ae3dfb75146a25c294",
+      "cookies": [],
+      "created": 1596851544834,
+      "modified": 1596851544834,
+      "name": "Default Jar",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_aefb04746246447786d9ed5163df14c9",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1596851544722,
+      "fileName": "Cashbook App",
+      "modified": 1596851544722,
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_6e62b4a227f9476db5ba75fa934ad568",
+      "color": null,
+      "created": 1596851618576,
+      "data": { "base_url": "http://localhost:3333" },
+      "dataPropertyOrder": { "&": ["base_url"] },
+      "isPrivate": false,
+      "metaSortKey": 1596851618576,
+      "modified": 1596851638338,
+      "name": "Development",
+      "parentId": "env_0a3164970f69f2aa2ffa60ae3dfb75146a25c294",
+      "_type": "environment"
+    }
+  ]
+}
