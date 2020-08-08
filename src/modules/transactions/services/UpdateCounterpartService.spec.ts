@@ -1,21 +1,21 @@
 import { v4 } from 'uuid';
-import FakeAccountsRepository from '../repositories/FakeAccountsRepository';
-import UpdateAccountService from './UpdateAccountService';
+import FakeCounterpartsRepository from '../repositories/FakeCounterpartsRepository';
+import UpdateCounterpartService from './UpdateCounterpartService';
 import AppError from '../../../shared/errors/AppError';
 
-describe('Update Account Service', () => {
-  let accountsRepository: FakeAccountsRepository;
-  let service: UpdateAccountService;
+describe('Update Counterpart Service', () => {
+  let counterpartsRepository: FakeCounterpartsRepository;
+  let service: UpdateCounterpartService;
   const id1 = v4();
   const id2 = v4();
 
   beforeAll(() => {
-    accountsRepository = new FakeAccountsRepository();
-    service = new UpdateAccountService(accountsRepository);
+    counterpartsRepository = new FakeCounterpartsRepository();
+    service = new UpdateCounterpartService(counterpartsRepository);
   });
 
   beforeEach(() => {
-    accountsRepository.table = [
+    counterpartsRepository.table = [
       {
         id: id1,
         name: 'Conta corrente em banco',
@@ -33,25 +33,27 @@ describe('Update Account Service', () => {
     ];
   });
 
-  it('Should update account', async () => {
+  it('Should update counterpart', async () => {
     await expect(
       service.execute({
-        accountId: id1,
+        counterpartId: id1,
         name: 'Nova conta corrente',
       }),
     ).resolves.toBeTruthy();
-    expect(accountsRepository.table).toHaveLength(2);
-    expect(accountsRepository.table[0].name).toEqual('Nova conta corrente');
+    expect(counterpartsRepository.table).toHaveLength(2);
+    expect(counterpartsRepository.table[0].name).toEqual('Nova conta corrente');
   });
 
-  it('Should not update account with already existing name', async () => {
+  it('Should not update counterpart with already existing name', async () => {
     await expect(
       service.execute({
-        accountId: id1,
+        counterpartId: id1,
         name: 'Conta poupança em banco',
       }),
     ).rejects.toBeInstanceOf(AppError);
-    expect(accountsRepository.table).toHaveLength(2);
-    expect(accountsRepository.table[0].name).toEqual('Conta corrente em banco');
+    expect(counterpartsRepository.table).toHaveLength(2);
+    expect(counterpartsRepository.table[0].name).toEqual(
+      'Conta corrente em banco',
+    );
   });
 });

@@ -9,10 +9,10 @@ export default async (req: Request, res: Response): Promise<void> => {
 
   const service = container.resolve(ListCounterpartService);
 
-  const accounts = await service.execute({
+  const counterparts = await service.execute({
     page: +page,
     fields: (fields as string).split(',') as (keyof ICounterpart)[],
   });
 
-  res.status(200).send(accounts);
+  res.status(200).send(counterparts);
 };

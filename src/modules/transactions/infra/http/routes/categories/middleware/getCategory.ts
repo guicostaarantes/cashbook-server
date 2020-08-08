@@ -11,10 +11,10 @@ export default async (req: Request, res: Response): Promise<void> => {
 
   const service = container.resolve(GetCategoryService);
 
-  const account = await service.execute({
+  const category = await service.execute({
     id,
     fields: (fields as string).split(',') as (keyof ICategory)[],
   });
 
-  res.status(200).send(account);
+  res.status(200).send(category);
 };

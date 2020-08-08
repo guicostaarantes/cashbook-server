@@ -1,19 +1,19 @@
 import { v4 } from 'uuid';
-import FakeAccountsRepository from '../repositories/FakeAccountsRepository';
-import ListAccountService from './ListAccountService';
+import FakeCounterpartsRepository from '../repositories/FakeCounterpartsRepository';
+import ListCounterpartService from './ListCounterpartService';
 import AppError from '../../../shared/errors/AppError';
 
-describe('List Account Service', () => {
-  let accountsRepository: FakeAccountsRepository;
-  let service: ListAccountService;
+describe('List Counterpart Service', () => {
+  let counterpartsRepository: FakeCounterpartsRepository;
+  let service: ListCounterpartService;
 
   beforeAll(() => {
-    accountsRepository = new FakeAccountsRepository();
-    service = new ListAccountService(accountsRepository);
+    counterpartsRepository = new FakeCounterpartsRepository();
+    service = new ListCounterpartService(counterpartsRepository);
   });
 
   beforeEach(() => {
-    accountsRepository.table = [
+    counterpartsRepository.table = [
       {
         id: v4(),
         name: 'Fornecedor A',
@@ -31,7 +31,7 @@ describe('List Account Service', () => {
     ];
   });
 
-  it('Should list accounts', async () => {
+  it('Should list counterparts', async () => {
     await expect(
       service.execute({
         page: 1,
@@ -40,7 +40,7 @@ describe('List Account Service', () => {
     ).resolves.toHaveLength(2);
   });
 
-  it('Should not list accounts if page is out of bounds', async () => {
+  it('Should not list counterparts if page is out of bounds', async () => {
     await expect(
       service.execute({
         page: 2,

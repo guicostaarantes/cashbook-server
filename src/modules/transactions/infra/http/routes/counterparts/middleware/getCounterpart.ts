@@ -11,10 +11,10 @@ export default async (req: Request, res: Response): Promise<void> => {
 
   const service = container.resolve(GetCounterpartService);
 
-  const account = await service.execute({
+  const counterpart = await service.execute({
     id,
     fields: (fields as string).split(',') as (keyof ICounterpart)[],
   });
 
-  res.status(200).send(account);
+  res.status(200).send(counterpart);
 };

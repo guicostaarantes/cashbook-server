@@ -8,9 +8,9 @@ export default async (req: Request, res: Response): Promise<void> => {
 
   const service = container.resolve(CreateCounterpartService);
 
-  const account = await service.execute({
+  const counterparts = await service.execute({
     name,
   });
 
-  res.status(200).send(account);
+  res.status(200).send(counterparts);
 };
