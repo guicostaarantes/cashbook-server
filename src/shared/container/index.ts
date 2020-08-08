@@ -13,8 +13,10 @@ import JWTokenProvider from '../providers/TokenProvider/implementations/JWTokenP
 import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementations/HandlebarsTemplateProvider';
 
 import { IUsersRepository } from '../../modules/users/repositories/IUsersRepository';
+import { IAccountsRepository } from '../../modules/accounts/repositories/IAccountsRepository';
 
 import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
+import AccountsRepository from '../../modules/accounts/infra/database/repositories/AccountsRepository';
 
 // Providers
 
@@ -44,4 +46,8 @@ container.registerInstance<ITokenProvider>(
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
+);
+container.registerSingleton<IAccountsRepository>(
+  'AccountsRepository',
+  AccountsRepository,
 );
