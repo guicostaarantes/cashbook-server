@@ -18,6 +18,12 @@ class GetAccountService {
   ) {}
 
   public async execute({ id, fields }: IServiceRequest): Promise<IAccount> {
+    const validFields = fields.every(field => ['id', 'name'].includes(field));
+
+    if (!validFields) {
+      throw new AppError('Bad request', 400);
+    }
+
     const account = await this.accountsRepository.findById(id, fields);
 
     if (!account) {

@@ -18,9 +18,11 @@ class ListUserService {
   ) {}
 
   public async execute({ page, fields }: IServiceRequest): Promise<IUser[]> {
-    const invalid = fields.some(field => ['password'].includes(field));
+    const validFields = fields.every(field =>
+      ['id', 'fullName', 'email', 'avatar'].includes(field),
+    );
 
-    if (invalid) {
+    if (!validFields) {
       throw new AppError('Bad request', 400);
     }
 
