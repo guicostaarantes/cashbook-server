@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-08-08T12:38:29.968Z",
+  "__export_date": "2020-08-08T13:26:06.612Z",
   "__export_source": "insomnia.desktop.app:v2020.3.3",
   "resources": [
     {
@@ -451,7 +451,7 @@
       },
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\": \"Conta corrente Banco X\"\n}"
+        "text": "{\n\t\"name\": \"Conta corrente Banco Y\"\n}"
       },
       "created": 1596886656340,
       "description": "",
@@ -465,7 +465,7 @@
       "isPrivate": false,
       "metaSortKey": -1596852426489.5,
       "method": "PATCH",
-      "modified": 1596886807098,
+      "modified": 1596893152115,
       "name": "/:id",
       "parameters": [],
       "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
@@ -624,6 +624,154 @@
       "settingSendCookies": true,
       "settingStoreCookies": true,
       "url": "{{ base_url }}/counterparts/{% response 'body', 'req_b049e5e9a1bb4a3994728c5151aab7f5', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3c8b1ded58f54c93821a2c1e1265c19e",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Taxas e impostos\"\n}"
+      },
+      "created": 1596892024093,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_ff2e20f8fff643af95d8e153089e09dc",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596854267497,
+      "method": "POST",
+      "modified": 1596892418515,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_c259b9d313604d48b8470212a190dac6",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/categories",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c259b9d313604d48b8470212a190dac6",
+      "created": 1596892024084,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1591396941328,
+      "modified": 1596892024084,
+      "name": "/categories",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_c61a4d2d50a6440681d1cd558d3628bb",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596892024104,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596854267447,
+      "method": "GET",
+      "modified": 1596892459993,
+      "name": "/",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_8fc822d9dc8c4ecfb7b9e07e26def75b",
+          "name": "fields",
+          "value": "id,name"
+        }
+      ],
+      "parentId": "fld_c259b9d313604d48b8470212a190dac6",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/categories",
+      "_type": "request"
+    },
+    {
+      "_id": "req_942cdfae84ca41189753c2daf865d44b",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596892024110,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596853040142,
+      "method": "GET",
+      "modified": 1596892477186,
+      "name": "/:id",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "name"
+        }
+      ],
+      "parentId": "fld_c259b9d313604d48b8470212a190dac6",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/categories/{% response 'body', 'req_c61a4d2d50a6440681d1cd558d3628bb', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_cda0fca4690741128e9ce9ba00ff9158",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Dividendos\"\n}"
+      },
+      "created": 1596892024113,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_66bad747d73346f1b3d4778ec1d5cac9",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596852426489.5,
+      "method": "PATCH",
+      "modified": 1596892509725,
+      "name": "/:id",
+      "parameters": [],
+      "parentId": "fld_c259b9d313604d48b8470212a190dac6",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/categories/{% response 'body', 'req_c61a4d2d50a6440681d1cd558d3628bb', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
       "_type": "request"
     },
     {
