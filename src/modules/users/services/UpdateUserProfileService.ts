@@ -22,11 +22,11 @@ class UpdateUserProfileService {
   }: IServiceRequest): Promise<IUser> {
     const user = await this.usersRepository.findById(userId, []);
 
-    const invalid = Object.keys(changingFields).some(field =>
-      ['id', 'email', 'password'].includes(field),
+    const validFields = Object.keys(changingFields).every(field =>
+      ['fullName'].includes(field),
     );
 
-    if (invalid) {
+    if (!validFields) {
       throw new AppError('Bad request', 400);
     }
 

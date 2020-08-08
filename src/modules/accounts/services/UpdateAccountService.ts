@@ -23,11 +23,11 @@ class UpdateAccountService {
   }: IServiceRequest): Promise<IAccount> {
     const account = await this.accountsRepository.findById(accountId, []);
 
-    const invalid = Object.keys(changingFields).some(field =>
-      ['id'].includes(field),
+    const validFields = Object.keys(changingFields).every(field =>
+      ['name'].includes(field),
     );
 
-    if (invalid) {
+    if (!validFields) {
       throw new AppError('Bad request', 400);
     }
 
