@@ -14,9 +14,11 @@ import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementa
 
 import { IUsersRepository } from '../../modules/users/repositories/IUsersRepository';
 import { IAccountsRepository } from '../../modules/transactions/repositories/IAccountsRepository';
+import { ICounterpartsRepository } from '../../modules/transactions/repositories/ICounterpartsRepository';
 
 import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
 import AccountsRepository from '../../modules/transactions/infra/database/repositories/AccountsRepository';
+import CounterpartsRepository from '../../modules/transactions/infra/database/repositories/CounterpartsRepository';
 
 // Providers
 
@@ -50,4 +52,8 @@ container.registerSingleton<IUsersRepository>(
 container.registerSingleton<IAccountsRepository>(
   'AccountsRepository',
   AccountsRepository,
+);
+container.registerSingleton<ICounterpartsRepository>(
+  'CounterpartsRepository',
+  CounterpartsRepository,
 );
