@@ -6,7 +6,7 @@ import {
 } from 'typeorm';
 
 import { IUsersRepository, ICreateUserDTO } from '../IUsersRepository';
-import User from '../../entities/implementations/PGUser';
+import User from '../../../entities/users/implementations/PGUser';
 
 class UsersRepository implements IUsersRepository {
   baseRepository: Repository<User>;

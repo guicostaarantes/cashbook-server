@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeUsersRepository from '../repositories/implementations/FakeUsersRepository';
+import FakeUsersRepository from '../repositories/users/implementations/FakeUsersRepository';
 import SendForgotPasswordEmailService from './SendForgotPasswordEmailService';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';
 import FakeMailProvider from '../../../shared/providers/MailProvider/implementations/FakeMailProvider';

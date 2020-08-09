@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeUsersRepository from '../repositories/implementations/FakeUsersRepository';
+import FakeUsersRepository from '../repositories/users/implementations/FakeUsersRepository';
 import GetUserService from './GetUserService';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';
 import AppError from '../../../shared/errors/AppError';

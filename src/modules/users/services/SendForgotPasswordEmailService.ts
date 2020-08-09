@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import fs from 'fs';
 import path from 'path';
 import { inject, injectable } from 'tsyringe';
-import { IUsersRepository } from '../repositories/IUsersRepository';
+import { IUsersRepository } from '../repositories/users/IUsersRepository';
 import { IMailProvider } from '../../../shared/providers/MailProvider/IMailProvider';
 import { ITokenProvider } from '../../../shared/providers/TokenProvider/ITokenProvider';
 

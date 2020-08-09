@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
-import IUser from '../entities/IUser';
-import { IUsersRepository } from '../repositories/IUsersRepository';
+import IUser from '../entities/users/IUser';
+import { IUsersRepository } from '../repositories/users/IUsersRepository';
 import { IStorageProvider } from '../../../shared/providers/StorageProvider/IStorageProvider';
 import AppError from '../../../shared/errors/AppError';
 

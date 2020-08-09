@@ -1,5 +1,5 @@
 import { IUsersRepository, ICreateUserDTO } from '../IUsersRepository';
-import FakeUser from '../../entities/implementations/FakeUser';
+import FakeUser from '../../../entities/users/implementations/FakeUser';
 
 class FakeUsersRepository implements IUsersRepository {
   public table: FakeUser[];

@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
-import { IUsersRepository } from '../repositories/IUsersRepository';
+import { IUsersRepository } from '../repositories/users/IUsersRepository';
 import { IHashProvider } from '../../../shared/providers/HashProvider/IHashProvider';
 import { ITokenProvider } from '../../../shared/providers/TokenProvider/ITokenProvider';
 import AppError from '../../../shared/errors/AppError';

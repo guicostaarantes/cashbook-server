@@ -2,7 +2,7 @@ import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
 import GetUserService from '../../../services/GetUserService';
-import IUser from '../../../entities/IUser';
+import IUser from '../../../entities/users/IUser';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const id = req.tokenUserId;

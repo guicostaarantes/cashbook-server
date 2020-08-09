@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeUsersRepository from '../repositories/implementations/FakeUsersRepository';
+import FakeUsersRepository from '../repositories/users/implementations/FakeUsersRepository';
 import AuthenticateUserService from './AuthenticateUserService';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';
 import JWTokenProvider from '../../../shared/providers/TokenProvider/implementations/JWTokenProvider';

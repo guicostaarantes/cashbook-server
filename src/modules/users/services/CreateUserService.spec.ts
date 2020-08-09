@@ -1,4 +1,4 @@
-import FakeUsersRepository from '../repositories/implementations/FakeUsersRepository';
+import FakeUsersRepository from '../repositories/users/implementations/FakeUsersRepository';
 import CreateUserService from './CreateUserService';
 import AppError from '../../../shared/errors/AppError';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';

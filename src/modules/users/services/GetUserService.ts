@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../shared/errors/AppError';
-import IUser from '../entities/IUser';
-import { IUsersRepository } from '../repositories/IUsersRepository';
+import IUser from '../entities/users/IUser';
+import { IUsersRepository } from '../repositories/users/IUsersRepository';
 
 interface IServiceRequest {
   id: string;

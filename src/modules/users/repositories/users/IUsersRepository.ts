@@ -1,4 +1,4 @@
-import IUser from '../entities/IUser';
+import IUser from '../../entities/users/IUser';
 
 export interface ICreateUserDTO {
   fullName: string;

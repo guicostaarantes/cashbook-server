@@ -12,13 +12,13 @@ import EtherealMailProvider from '../providers/MailProvider/implementations/Ethe
 import JWTokenProvider from '../providers/TokenProvider/implementations/JWTokenProvider';
 import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementations/HandlebarsTemplateProvider';
 
-import { IUsersRepository } from '../../modules/users/repositories/IUsersRepository';
+import { IUsersRepository } from '../../modules/users/repositories/users/IUsersRepository';
 import { IAccountsRepository } from '../../modules/transactions/repositories/accounts/IAccountsRepository';
 import { ICounterpartsRepository } from '../../modules/transactions/repositories/counterparts/ICounterpartsRepository';
 import { ICategoriesRepository } from '../../modules/transactions/repositories/categories/ICategoriesRepository';
 import { ITransactionsRepository } from '../../modules/transactions/repositories/transactions/ITransactionsRepository';
 
-import PGUsersRepository from '../../modules/users/repositories/implementations/PGUsersRepository';
+import PGUsersRepository from '../../modules/users/repositories/users/implementations/PGUsersRepository';
 import PGAccountsRepository from '../../modules/transactions/repositories/accounts/implementations/PGAccountsRepository';
 import PGCounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/PGCounterpartsRepository';
 import PGCategoriesRepository from '../../modules/transactions/repositories/categories/implementations/PGCategoriesRepository';

@@ -2,7 +2,7 @@ import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
 import ListUserService from '../../../services/ListUserService';
-import IUser from '../../../entities/IUser';
+import IUser from '../../../entities/users/IUser';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { page = 1, fields = 'id,fullName,avatar' } = req.query;
