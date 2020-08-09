@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../../shared/errors/AppError';
-import { ITransactionsRepository } from '../../repositories/ITransactionsRepository';
+import { ITransactionsRepository } from '../../repositories/transactions/ITransactionsRepository';
 
 interface IServiceRequest {
   transactionId: string;

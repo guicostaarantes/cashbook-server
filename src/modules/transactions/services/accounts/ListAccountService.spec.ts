@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeAccountsRepository from '../../repositories/FakeAccountsRepository';
+import FakeAccountsRepository from '../../repositories/accounts/implementations/FakeAccountsRepository';
 import ListAccountService from './ListAccountService';
 import AppError from '../../../../shared/errors/AppError';
 

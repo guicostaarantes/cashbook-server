@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import accountsRouter from '../../../modules/transactions/infra/http/routes/accounts';
-import counterpartsRouter from '../../../modules/transactions/infra/http/routes/counterparts';
-import categoriesRouter from '../../../modules/transactions/infra/http/routes/categories';
-import transactionsRouter from '../../../modules/transactions/infra/http/routes/transactions';
+import accountsRouter from '../../../modules/transactions/web/accounts';
+import counterpartsRouter from '../../../modules/transactions/web/counterparts';
+import categoriesRouter from '../../../modules/transactions/web/categories';
+import transactionsRouter from '../../../modules/transactions/web/transactions';
 import sessionsRouter from '../../../modules/users/infra/http/routes/sessions';
 import usersRouter from '../../../modules/users/infra/http/routes/users';
 

@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../../shared/errors/AppError';
-import ICategory from '../../entities/ICategory';
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import ICategory from '../../entities/categories/ICategory';
+import { ICategoriesRepository } from '../../repositories/categories/ICategoriesRepository';
 
 interface IServiceRequest {
   page: number;

@@ -13,16 +13,16 @@ import JWTokenProvider from '../providers/TokenProvider/implementations/JWTokenP
 import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementations/HandlebarsTemplateProvider';
 
 import { IUsersRepository } from '../../modules/users/repositories/IUsersRepository';
-import { IAccountsRepository } from '../../modules/transactions/repositories/IAccountsRepository';
-import { ICounterpartsRepository } from '../../modules/transactions/repositories/ICounterpartsRepository';
-import { ICategoriesRepository } from '../../modules/transactions/repositories/ICategoriesRepository';
-import { ITransactionsRepository } from '../../modules/transactions/repositories/ITransactionsRepository';
+import { IAccountsRepository } from '../../modules/transactions/repositories/accounts/IAccountsRepository';
+import { ICounterpartsRepository } from '../../modules/transactions/repositories/counterparts/ICounterpartsRepository';
+import { ICategoriesRepository } from '../../modules/transactions/repositories/categories/ICategoriesRepository';
+import { ITransactionsRepository } from '../../modules/transactions/repositories/transactions/ITransactionsRepository';
 
 import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
-import AccountsRepository from '../../modules/transactions/infra/database/repositories/AccountsRepository';
-import CounterpartsRepository from '../../modules/transactions/infra/database/repositories/CounterpartsRepository';
-import CategoriesRepository from '../../modules/transactions/infra/database/repositories/CategoriesRepository';
-import TransactionsRepository from '../../modules/transactions/infra/database/repositories/TransactionsRepository';
+import AccountsRepository from '../../modules/transactions/repositories/accounts/implementations/AccountsRepository';
+import CounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/CounterpartsRepository';
+import CategoriesRepository from '../../modules/transactions/repositories/categories/implementations/CategoriesRepository';
+import TransactionsRepository from '../../modules/transactions/repositories/transactions/implementations/TransactionsRepository';
 
 // Providers
 

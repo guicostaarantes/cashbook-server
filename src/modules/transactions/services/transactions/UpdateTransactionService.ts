@@ -2,12 +2,12 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../../shared/errors/AppError';
-import ITransaction from '../../entities/ITransaction';
-import { ITransactionsRepository } from '../../repositories/ITransactionsRepository';
-import { IAccountsRepository } from '../../repositories/IAccountsRepository';
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
-import { ICounterpartsRepository } from '../../repositories/ICounterpartsRepository';
-import EStatus from '../../entities/EStatus';
+import ITransaction from '../../entities/transactions/ITransaction';
+import { ITransactionsRepository } from '../../repositories/transactions/ITransactionsRepository';
+import { IAccountsRepository } from '../../repositories/accounts/IAccountsRepository';
+import { ICategoriesRepository } from '../../repositories/categories/ICategoriesRepository';
+import { ICounterpartsRepository } from '../../repositories/counterparts/ICounterpartsRepository';
+import EStatus from '../../entities/transactions/EStatus';
 
 interface IServiceRequest {
   transactionId: string;

@@ -1,4 +1,4 @@
-import FakeAccountsRepository from '../../repositories/FakeAccountsRepository';
+import FakeAccountsRepository from '../../repositories/accounts/implementations/FakeAccountsRepository';
 import CreateAccountService from './CreateAccountService';
 import AppError from '../../../../shared/errors/AppError';
 

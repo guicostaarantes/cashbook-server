@@ -1,4 +1,4 @@
-import FakeCounterpartsRepository from '../../repositories/FakeCounterpartsRepository';
+import FakeCounterpartsRepository from '../../repositories/counterparts/implementations/FakeCounterpartsRepository';
 import CreateCounterpartService from './CreateCounterpartService';
 import AppError from '../../../../shared/errors/AppError';
 

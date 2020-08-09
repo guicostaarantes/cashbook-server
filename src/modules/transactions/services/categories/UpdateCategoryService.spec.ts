@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeCategoriesRepository from '../../repositories/FakeCategoriesRepository';
+import FakeCategoriesRepository from '../../repositories/categories/implementations/FakeCategoriesRepository';
 import UpdateCategoryService from './UpdateCategoryService';
 import AppError from '../../../../shared/errors/AppError';
 

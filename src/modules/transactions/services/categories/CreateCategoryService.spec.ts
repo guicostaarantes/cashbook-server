@@ -1,4 +1,4 @@
-import FakeCategoriesRepository from '../../repositories/FakeCategoriesRepository';
+import FakeCategoriesRepository from '../../repositories/categories/implementations/FakeCategoriesRepository';
 import CreateCategoryService from './CreateCategoryService';
 import AppError from '../../../../shared/errors/AppError';
 

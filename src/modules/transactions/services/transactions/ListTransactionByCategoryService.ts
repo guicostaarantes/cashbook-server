@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../../shared/errors/AppError';
-import ITransaction from '../../entities/ITransaction';
-import { ITransactionsRepository } from '../../repositories/ITransactionsRepository';
+import ITransaction from '../../entities/transactions/ITransaction';
+import { ITransactionsRepository } from '../../repositories/transactions/ITransactionsRepository';
 
 interface IServiceRequest {
   categoryId: string;

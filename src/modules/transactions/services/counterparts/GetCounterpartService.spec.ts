@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeCounterpartsRepository from '../../repositories/FakeCounterpartsRepository';
+import FakeCounterpartsRepository from '../../repositories/counterparts/implementations/FakeCounterpartsRepository';
 import GetCounterpartService from './GetCounterpartService';
 import AppError from '../../../../shared/errors/AppError';
 

@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import { inject, injectable } from 'tsyringe';
 
 import AppError from '../../../../shared/errors/AppError';
-import ICounterpart from '../../entities/ICounterpart';
-import { ICounterpartsRepository } from '../../repositories/ICounterpartsRepository';
+import ICounterpart from '../../entities/counterparts/ICounterpart';
+import { ICounterpartsRepository } from '../../repositories/counterparts/ICounterpartsRepository';
 
 interface IServiceRequest {
   name: string;
