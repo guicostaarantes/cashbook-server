@@ -18,7 +18,7 @@ import { ICounterpartsRepository } from '../../modules/transactions/repositories
 import { ICategoriesRepository } from '../../modules/transactions/repositories/categories/ICategoriesRepository';
 import { ITransactionsRepository } from '../../modules/transactions/repositories/transactions/ITransactionsRepository';
 
-import PGUsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
+import PGUsersRepository from '../../modules/users/repositories/implementations/UsersRepository';
 import PGAccountsRepository from '../../modules/transactions/repositories/accounts/implementations/PGAccountsRepository';
 import PGCounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/PGCounterpartsRepository';
 import PGCategoriesRepository from '../../modules/transactions/repositories/categories/implementations/PGCategoriesRepository';

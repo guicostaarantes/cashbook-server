@@ -5,11 +5,8 @@ import {
   FindOneOptions,
 } from 'typeorm';
 
-import {
-  IUsersRepository,
-  ICreateUserDTO,
-} from '../../../repositories/IUsersRepository';
-import User from '../entities/User';
+import { IUsersRepository, ICreateUserDTO } from '../IUsersRepository';
+import User from '../../entities/implementations/User';
 
 class UsersRepository implements IUsersRepository {
   baseRepository: Repository<User>;

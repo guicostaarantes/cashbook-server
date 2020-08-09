@@ -7,7 +7,7 @@ import {
   DeleteDateColumn,
 } from 'typeorm';
 
-import IUser from '../../../entities/IUser';
+import IUser from '../IUser';
 
 @Entity('users')
 class User implements IUser {

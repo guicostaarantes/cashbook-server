@@ -1,12 +1,12 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
-import UpdateUserProfileService from '../../../../../services/UpdateUserProfileService';
+import UpdateUserAvatarService from '../../../services/UpdateUserAvatarService';
 
 export default async (req: Request, res: Response): Promise<void> => {
-  const service = container.resolve(UpdateUserProfileService);
+  const service = container.resolve(UpdateUserAvatarService);
   const user = await service.execute({
     userId: req.tokenUserId,
-    ...req.body,
+    avatarFilename: req.file.filename,
   });
   res.status(200).send(user);
 };

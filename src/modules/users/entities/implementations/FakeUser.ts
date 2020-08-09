@@ -1,4 +1,4 @@
-import IUser from './IUser';
+import IUser from '../IUser';
 
 class FakeUser implements IUser {
   id: string;

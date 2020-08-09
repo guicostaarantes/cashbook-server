@@ -4,8 +4,8 @@ import accountsRouter from '../../../modules/transactions/web/accounts';
 import counterpartsRouter from '../../../modules/transactions/web/counterparts';
 import categoriesRouter from '../../../modules/transactions/web/categories';
 import transactionsRouter from '../../../modules/transactions/web/transactions';
-import sessionsRouter from '../../../modules/users/infra/http/routes/sessions';
-import usersRouter from '../../../modules/users/infra/http/routes/users';
+import sessionsRouter from '../../../modules/users/web/sessions';
+import usersRouter from '../../../modules/users/web/users';
 
 const routes = Router();
 

@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import FakeUsersRepository from '../repositories/FakeUsersRepository';
+import FakeUsersRepository from '../repositories/implementations/FakeUsersRepository';
 import UpdateUserAvatarService from './UpdateUserAvatarService';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';
 import FakeStorageProvider from '../../../shared/providers/StorageProvider/implementations/FakeStorageProvider';

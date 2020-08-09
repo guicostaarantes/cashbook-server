@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
 
-import ensureAuthenticated from '../../../../../../shared/infra/http/middleware/ensureAuthenticated';
-import upload from '../../../../../../shared/infra/http/middleware/upload';
+import ensureAuthenticated from '../../../../shared/infra/http/middleware/ensureAuthenticated';
+import upload from '../../../../shared/infra/http/middleware/upload';
 import getUser from './middleware/getUser';
 import getMeUser from './middleware/getMeUser';
 import getUsers from './middleware/getUsers';

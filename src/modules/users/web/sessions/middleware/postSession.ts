@@ -1,7 +1,7 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import AuthenticateUserService from '../../../../../services/AuthenticateUserService';
+import AuthenticateUserService from '../../../services/AuthenticateUserService';
 
 export default async (req: Request, res: Response): Promise<void> => {
   const { email, password } = req.body;

@@ -1,13 +1,13 @@
 import { container } from 'tsyringe';
 import { Request, Response } from 'express';
 
-import GetUserService from '../../../../../services/GetUserService';
-import IUser from '../../../../../entities/IUser';
+import GetUserService from '../../../services/GetUserService';
+import IUser from '../../../entities/IUser';
 
 export default async (req: Request, res: Response): Promise<void> => {
-  const id = req.tokenUserId;
+  const { id } = req.params;
 
-  const { fields = 'id,fullName,email,avatar' } = req.query;
+  const { fields = 'id,fullName,avatar' } = req.query;
 
   const service = container.resolve(GetUserService);
 
