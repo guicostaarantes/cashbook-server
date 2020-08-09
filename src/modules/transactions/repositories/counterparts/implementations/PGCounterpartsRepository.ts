@@ -9,7 +9,7 @@ import {
   ICounterpartsRepository,
   ICreateCounterpartDTO,
 } from '../ICounterpartsRepository';
-import Counterpart from '../../../entities/counterparts/implementations/Counterpart';
+import Counterpart from '../../../entities/counterparts/implementations/PGCounterpart';
 
 class CounterpartsRepository implements ICounterpartsRepository {
   baseRepository: Repository<Counterpart>;

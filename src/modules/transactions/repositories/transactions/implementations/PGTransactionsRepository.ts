@@ -9,7 +9,7 @@ import {
   ITransactionsRepository,
   ICreateTransactionDTO,
 } from '../ITransactionsRepository';
-import Transaction from '../../../entities/transactions/implementations/Transaction';
+import Transaction from '../../../entities/transactions/implementations/PGTransaction';
 
 class TransactionsRepository implements ITransactionsRepository {
   baseRepository: Repository<Transaction>;

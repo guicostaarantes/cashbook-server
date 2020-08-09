@@ -18,11 +18,11 @@ import { ICounterpartsRepository } from '../../modules/transactions/repositories
 import { ICategoriesRepository } from '../../modules/transactions/repositories/categories/ICategoriesRepository';
 import { ITransactionsRepository } from '../../modules/transactions/repositories/transactions/ITransactionsRepository';
 
-import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
-import AccountsRepository from '../../modules/transactions/repositories/accounts/implementations/AccountsRepository';
-import CounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/CounterpartsRepository';
-import CategoriesRepository from '../../modules/transactions/repositories/categories/implementations/CategoriesRepository';
-import TransactionsRepository from '../../modules/transactions/repositories/transactions/implementations/TransactionsRepository';
+import PGUsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
+import PGAccountsRepository from '../../modules/transactions/repositories/accounts/implementations/PGAccountsRepository';
+import PGCounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/PGCounterpartsRepository';
+import PGCategoriesRepository from '../../modules/transactions/repositories/categories/implementations/PGCategoriesRepository';
+import PGTransactionsRepository from '../../modules/transactions/repositories/transactions/implementations/PGTransactionsRepository';
 
 // Providers
 
@@ -51,21 +51,21 @@ container.registerInstance<ITokenProvider>(
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
-  UsersRepository,
+  PGUsersRepository,
 );
 container.registerSingleton<IAccountsRepository>(
   'AccountsRepository',
-  AccountsRepository,
+  PGAccountsRepository,
 );
 container.registerSingleton<ICounterpartsRepository>(
   'CounterpartsRepository',
-  CounterpartsRepository,
+  PGCounterpartsRepository,
 );
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
-  CategoriesRepository,
+  PGCategoriesRepository,
 );
 container.registerSingleton<ITransactionsRepository>(
   'TransactionsRepository',
-  TransactionsRepository,
+  PGTransactionsRepository,
 );

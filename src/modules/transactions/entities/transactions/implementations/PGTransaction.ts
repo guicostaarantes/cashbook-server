@@ -12,9 +12,9 @@ import {
 import ITransaction from '../ITransaction';
 import EStatus from '../EStatus';
 
-import Account from '../../accounts/implementations/Account';
-import Category from '../../categories/implementations/Category';
-import Counterpart from '../../counterparts/implementations/Counterpart';
+import Account from '../../accounts/implementations/PGAccount';
+import Category from '../../categories/implementations/PGCategory';
+import Counterpart from '../../counterparts/implementations/PGCounterpart';
 
 @Entity('transactions')
 class Transaction implements ITransaction {

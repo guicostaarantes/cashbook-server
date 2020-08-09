@@ -9,7 +9,7 @@ import {
   ICategoriesRepository,
   ICreateCategoryDTO,
 } from '../ICategoriesRepository';
-import Category from '../../../entities/categories/implementations/Category';
+import Category from '../../../entities/categories/implementations/PGCategory';
 
 class CategoriesRepository implements ICategoriesRepository {
   baseRepository: Repository<Category>;

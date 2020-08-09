@@ -6,7 +6,7 @@ import {
 } from 'typeorm';
 
 import { IAccountsRepository, ICreateAccountDTO } from '../IAccountsRepository';
-import Account from '../../../entities/accounts/implementations/Account';
+import Account from '../../../entities/accounts/implementations/PGAccount';
 
 class AccountsRepository implements IAccountsRepository {
   baseRepository: Repository<Account>;
