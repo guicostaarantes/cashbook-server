@@ -4,6 +4,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 import ensureAuthenticated from '../../../../../../shared/infra/http/middleware/ensureAuthenticated';
 import getCategories from './middleware/getCategories';
 import getCategory from './middleware/getCategory';
+import getTransactionsOfCategory from './middleware/getTransactionsOfCategory';
 import postCategory from './middleware/postCategory';
 import patchCategory from './middleware/patchCategory';
 
@@ -20,6 +21,17 @@ categoriesRouter.get(
     },
   }),
   getCategory,
+);
+
+categoriesRouter.get(
+  '/:id/transactions',
+  ensureAuthenticated,
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().uuid().required(),
+    },
+  }),
+  getTransactionsOfCategory,
 );
 
 categoriesRouter.post(

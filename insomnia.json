@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-08-08T13:26:06.612Z",
+  "__export_date": "2020-08-09T10:18:43.587Z",
   "__export_source": "insomnia.desktop.app:v2020.3.3",
   "resources": [
     {
@@ -444,6 +444,40 @@
       "_type": "request"
     },
     {
+      "_id": "req_a685b0037aa84eeaa17548498149ba43",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596968279576,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596852733315.75,
+      "method": "GET",
+      "modified": 1596968302711,
+      "name": "/:id/transactions",
+      "parameters": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "id,counterpart,value"
+        }
+      ],
+      "parentId": "fld_f7536166cd9c4f01afe2639a0613eede",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/accounts/{% response 'body', 'req_83d691af0ad04f41ae48228418c87920', 'b64::JFswXS5pZA==::46b', 'never', 60 %}/transactions",
+      "_type": "request"
+    },
+    {
       "_id": "req_e453331cada3440dbc06687e0eebdd67",
       "authentication": {
         "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
@@ -589,6 +623,40 @@
       "settingSendCookies": true,
       "settingStoreCookies": true,
       "url": "{{ base_url }}/counterparts/{% response 'body', 'req_b049e5e9a1bb4a3994728c5151aab7f5', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_89ee52317f8f44919a4519be28229c4c",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596968238452,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596852733315.75,
+      "method": "GET",
+      "modified": 1596968260116,
+      "name": "/:id/transactions",
+      "parameters": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "id,category,value"
+        }
+      ],
+      "parentId": "fld_4225ce9d1f7f477d960b7e81118db8b7",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/counterparts/{% response 'body', 'req_b049e5e9a1bb4a3994728c5151aab7f5', 'b64::JFswXS5pZA==::46b', 'never', 60 %}/transactions",
       "_type": "request"
     },
     {
@@ -740,6 +808,40 @@
       "_type": "request"
     },
     {
+      "_id": "req_0f76efb75e684517a207088b14abdd20",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596967909114,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596852733315.75,
+      "method": "GET",
+      "modified": 1596968230307,
+      "name": "/:id/transactions",
+      "parameters": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "id,account,value"
+        }
+      ],
+      "parentId": "fld_c259b9d313604d48b8470212a190dac6",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/categories/{% response 'body', 'req_c61a4d2d50a6440681d1cd558d3628bb', 'b64::JFswXS5pZA==::46b', 'never', 60 %}/transactions",
+      "_type": "request"
+    },
+    {
       "_id": "req_cda0fca4690741128e9ce9ba00ff9158",
       "authentication": {
         "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
@@ -761,7 +863,7 @@
       "isPrivate": false,
       "metaSortKey": -1596852426489.5,
       "method": "PATCH",
-      "modified": 1596892509725,
+      "modified": 1596968269646,
       "name": "/:id",
       "parameters": [],
       "parentId": "fld_c259b9d313604d48b8470212a190dac6",
@@ -772,6 +874,181 @@
       "settingSendCookies": true,
       "settingStoreCookies": true,
       "url": "{{ base_url }}/categories/{% response 'body', 'req_c61a4d2d50a6440681d1cd558d3628bb', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2ffe0501f3674987a2c0bd8d72295225",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never' %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"accountId\": \"{% response 'body', 'req_83d691af0ad04f41ae48228418c87920', 'b64::JFswXS5pZA==::46b', 'never', 60 %}\",\n\t\"categoryId\": \"{% response 'body', 'req_c61a4d2d50a6440681d1cd558d3628bb', 'b64::JFswXS5pZA==::46b', 'never', 60 %}\",\n\t\"counterpartId\": \"{% response 'body', 'req_b049e5e9a1bb4a3994728c5151aab7f5', 'b64::JFswXS5pZA==::46b', 'never', 60 %}\",\n\t\"status\": \"pending\",\n\t\"description\": \"Pagamento da mensalidade Agosto/2020\",\n\t\"value\": -150.00,\n\t\"referenceDate\": \"2020-08-08\"\n}"
+      },
+      "created": 1596943838855,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_ff2e20f8fff643af95d8e153089e09dc",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596854267497,
+      "method": "POST",
+      "modified": 1596944282401,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/transactions",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "created": 1596943838845,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1590487823682,
+      "modified": 1596943838845,
+      "name": "/transactions",
+      "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_4dd07467cadf4f288e8ccda0ebec3c21",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596943838867,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596854267447,
+      "method": "GET",
+      "modified": 1596944677235,
+      "name": "/",
+      "parameters": [
+        {
+          "description": "",
+          "disabled": false,
+          "id": "pair_8fc822d9dc8c4ecfb7b9e07e26def75b",
+          "name": "fields",
+          "value": "id,description,category,value"
+        }
+      ],
+      "parentId": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/transactions",
+      "_type": "request"
+    },
+    {
+      "_id": "req_67949a3f76a84632b6a73eae291a8dbf",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596943838872,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596853040142,
+      "method": "GET",
+      "modified": 1596945312066,
+      "name": "/:id",
+      "parameters": [
+        {
+          "description": "",
+          "id": "pair_f6e268a339a94813a8aaacb2b9d25e6e",
+          "name": "fields",
+          "value": "id,description"
+        }
+      ],
+      "parentId": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/transactions/{% response 'body', 'req_4dd07467cadf4f288e8ccda0ebec3c21', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_94935cbfd8cc47468ec3d9013425de77",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"description\": \"Pagamento de guia do DAS\"\n}"
+      },
+      "created": 1596943838875,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_66bad747d73346f1b3d4778ec1d5cac9",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1596852426489.5,
+      "method": "PATCH",
+      "modified": 1596967712144,
+      "name": "/:id",
+      "parameters": [],
+      "parentId": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/transactions/{% response 'body', 'req_4dd07467cadf4f288e8ccda0ebec3c21', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
+      "_type": "request"
+    },
+    {
+      "_id": "req_92d7f6bc904745e5b7867929fdc90032",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596967800861,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596852119663.25,
+      "method": "DELETE",
+      "modified": 1596967810030,
+      "name": "/:id",
+      "parameters": [],
+      "parentId": "fld_62aa59d32e5a41838b03aac36925e58b",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url }}/transactions/{% response 'body', 'req_4dd07467cadf4f288e8ccda0ebec3c21', 'b64::JFswXS5pZA==::46b', 'never', 60 %}",
       "_type": "request"
     },
     {

@@ -4,6 +4,7 @@ import { celebrate, Segments, Joi } from 'celebrate';
 import ensureAuthenticated from '../../../../../../shared/infra/http/middleware/ensureAuthenticated';
 import getCounterparts from './middleware/getCounterparts';
 import getCounterpart from './middleware/getCounterpart';
+import getTransactionsOfCounterpart from './middleware/getTransactionsOfCounterpart';
 import postCounterpart from './middleware/postCounterpart';
 import patchCounterpart from './middleware/patchCounterpart';
 
@@ -20,6 +21,17 @@ counterpartsRouter.get(
     },
   }),
   getCounterpart,
+);
+
+counterpartsRouter.get(
+  '/:id/transactions',
+  ensureAuthenticated,
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().uuid().required(),
+    },
+  }),
+  getTransactionsOfCounterpart,
 );
 
 counterpartsRouter.post(

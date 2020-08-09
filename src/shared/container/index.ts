@@ -16,11 +16,13 @@ import { IUsersRepository } from '../../modules/users/repositories/IUsersReposit
 import { IAccountsRepository } from '../../modules/transactions/repositories/IAccountsRepository';
 import { ICounterpartsRepository } from '../../modules/transactions/repositories/ICounterpartsRepository';
 import { ICategoriesRepository } from '../../modules/transactions/repositories/ICategoriesRepository';
+import { ITransactionsRepository } from '../../modules/transactions/repositories/ITransactionsRepository';
 
 import UsersRepository from '../../modules/users/infra/database/repositories/UsersRepository';
 import AccountsRepository from '../../modules/transactions/infra/database/repositories/AccountsRepository';
 import CounterpartsRepository from '../../modules/transactions/infra/database/repositories/CounterpartsRepository';
 import CategoriesRepository from '../../modules/transactions/infra/database/repositories/CategoriesRepository';
+import TransactionsRepository from '../../modules/transactions/infra/database/repositories/TransactionsRepository';
 
 // Providers
 
@@ -62,4 +64,8 @@ container.registerSingleton<ICounterpartsRepository>(
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
   CategoriesRepository,
+);
+container.registerSingleton<ITransactionsRepository>(
+  'TransactionsRepository',
+  TransactionsRepository,
 );

@@ -3,6 +3,7 @@ import { Router } from 'express';
 import accountsRouter from '../../../modules/transactions/infra/http/routes/accounts';
 import counterpartsRouter from '../../../modules/transactions/infra/http/routes/counterparts';
 import categoriesRouter from '../../../modules/transactions/infra/http/routes/categories';
+import transactionsRouter from '../../../modules/transactions/infra/http/routes/transactions';
 import sessionsRouter from '../../../modules/users/infra/http/routes/sessions';
 import usersRouter from '../../../modules/users/infra/http/routes/users';
 
@@ -11,6 +12,7 @@ const routes = Router();
 routes.use('/accounts', accountsRouter);
 routes.use('/counterparts', counterpartsRouter);
 routes.use('/categories', categoriesRouter);
+routes.use('/transactions', transactionsRouter);
 routes.use('/sessions', sessionsRouter);
 routes.use('/users', usersRouter);
 
