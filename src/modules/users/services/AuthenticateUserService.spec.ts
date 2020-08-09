@@ -1,18 +1,14 @@
 import { v4 } from 'uuid';
 import FakeUsersRepository from '../repositories/users/implementations/FakeUsersRepository';
+import FakeSessionsRepository from '../repositories/sessions/implementations/FakeSessionsRepository';
 import AuthenticateUserService from './AuthenticateUserService';
 import FakeHashProvider from '../../../shared/providers/HashProvider/implementations/FakeHashProvider';
 import JWTokenProvider from '../../../shared/providers/TokenProvider/implementations/JWTokenProvider';
 import AppError from '../../../shared/errors/AppError';
 
-interface ITokenPayload {
-  sub: string;
-  iat: number;
-  exp: number;
-}
-
 describe('Authenticate User Service', () => {
   let usersRepository: FakeUsersRepository;
+  let sessionsRepository: FakeSessionsRepository;
   let hashProvider: FakeHashProvider;
   let tokenProvider: JWTokenProvider;
   let service: AuthenticateUserService;
@@ -20,10 +16,12 @@ describe('Authenticate User Service', () => {
 
   beforeAll(() => {
     usersRepository = new FakeUsersRepository();
+    sessionsRepository = new FakeSessionsRepository();
     hashProvider = new FakeHashProvider();
     tokenProvider = new JWTokenProvider();
     service = new AuthenticateUserService(
       usersRepository,
+      sessionsRepository,
       hashProvider,
       tokenProvider,
     );
@@ -48,6 +46,7 @@ describe('Authenticate User Service', () => {
     const token = await service.execute({
       email: 'fulano@teste.com.br',
       password: 'Ful4nO*2020',
+      fingerprint: v4(),
     });
     const payload = await tokenProvider.check(token);
     expect(payload.subject).toBe(id);
@@ -59,6 +58,7 @@ describe('Authenticate User Service', () => {
       service.execute({
         email: 'fulano@teste.com.br',
         password: 'Ful4nO*2019',
+        fingerprint: v4(),
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
@@ -68,6 +68,7 @@ describe('Authenticate User Service', () => {
       service.execute({
         email: 'fulano@teste.com',
         password: 'Ful4nO*2019',
+        fingerprint: v4(),
       }),
     ).rejects.toBeInstanceOf(AppError);
   });

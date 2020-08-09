@@ -39,7 +39,10 @@ describe('Update User Password Service', () => {
   });
 
   it('Should be able to reset the password if a valid token is provided', async () => {
-    const token = await tokenProvider.generate(id, 'forgot-password');
+    const token = await tokenProvider.generate({
+      subject: id,
+      type: 'forgot-password',
+    });
     await expect(
       service.execute({ token, newPassword: 'Ful4nO*2021' }),
     ).resolves.toBeUndefined();
@@ -52,7 +55,10 @@ describe('Update User Password Service', () => {
   });
 
   it('Should not be able to reset the password if an invalid token is provided', async () => {
-    const token = await tokenProvider.generate(id, 'access-token');
+    const token = await tokenProvider.generate({
+      subject: id,
+      type: 'access-token',
+    });
     await expect(
       service.execute({ token, newPassword: 'Ful4nO*2021' }),
     ).rejects.toBeInstanceOf(AppError);

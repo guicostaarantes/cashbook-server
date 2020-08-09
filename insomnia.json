@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2020-08-09T10:18:43.587Z",
+  "__export_date": "2020-08-09T14:38:06.853Z",
   "__export_source": "insomnia.desktop.app:v2020.3.3",
   "resources": [
     {
@@ -259,7 +259,7 @@
       "authentication": {},
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMmU3NzEzYi1iNzg0LTQ4YzEtYmUzNy1mN2M5ZTJkYmYzZDEiLCJ0eXAiOiJmb3Jnb3QtcGFzc3dvcmQiLCJpYXQiOjE1ODk0OTI1MDUsImV4cCI6MTU4OTUyMTMwNX0.77elYCysvQrnrlWlbi01u9Sk2FW0Bi7bIts4XGz4noI\",\n\t\"newPassword\": \"Ful4nO*2021\"\n}"
+        "text": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZDA1ZWE4NC0xZWU3LTRiMDctYjgwMC05OTJjNWQxZWFlZDkiLCJ0eXAiOiJmb3Jnb3QtcGFzc3dvcmQiLCJpYXQiOjE1OTY5ODMyODgsImV4cCI6MTU5NzAxMjA4OH0.sAUPaNDlhDB0rLCRZXLSjhj5qSWBCemVZH3Y3mv-0eI\",\n\t\"newPassword\": \"Ful4nO*2020\"\n}"
       },
       "created": 1596853401456,
       "description": "",
@@ -273,7 +273,7 @@
       "isPrivate": false,
       "metaSortKey": -1591702558521.1875,
       "method": "PATCH",
-      "modified": 1596853437441,
+      "modified": 1596983643971,
       "name": "/forgot-password",
       "parameters": [],
       "parentId": "fld_0346597250034128b4557dd8b8d27111",
@@ -283,7 +283,7 @@
       "settingRebuildPath": true,
       "settingSendCookies": true,
       "settingStoreCookies": true,
-      "url": "{{ base_url  }}/users",
+      "url": "{{ base_url  }}/users/forgot-password",
       "_type": "request"
     },
     {
@@ -291,7 +291,7 @@
       "authentication": {},
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\"\n}"
+        "text": "{\n\t\"email\": \"fulano@teste.com.br\",\n\t\"password\": \"Ful4nO*2020\",\n\t\"fingerprint\": \"{% uuid 'v4' %}\"\n}"
       },
       "created": 1596851812837,
       "description": "",
@@ -305,7 +305,7 @@
       "isPrivate": false,
       "metaSortKey": -1596851812837,
       "method": "POST",
-      "modified": 1596851833191,
+      "modified": 1596983637178,
       "name": "/",
       "parameters": [],
       "parentId": "fld_93fd453ebae74ffba49ffb5f6198cf47",
@@ -329,6 +329,32 @@
       "name": "/sessions",
       "parentId": "wrk_90bba5bf67134954a59f4dfa41a7334f",
       "_type": "request_group"
+    },
+    {
+      "_id": "req_e5b2bbbc6c274e968e797b71f6a7c828",
+      "authentication": {
+        "token": "{% response 'body', 'req_8c023af92b91453198f0771fa2b7949c', 'b64::JC50b2tlbg==::46b', 'never', 60 %}",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1596982486168,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1596851735836.5,
+      "method": "DELETE",
+      "modified": 1596982515352,
+      "name": "/",
+      "parameters": [],
+      "parentId": "fld_93fd453ebae74ffba49ffb5f6198cf47",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "{{ base_url  }}/sessions",
+      "_type": "request"
     },
     {
       "_id": "req_f4fd5fc2c82843f6ac81debb7d9ba13f",

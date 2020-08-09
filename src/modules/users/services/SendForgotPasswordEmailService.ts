@@ -31,7 +31,10 @@ class SendForgotPasswordEmailService {
       return;
     }
 
-    const token = await this.tokenProvider.generate(user.id, 'forgot-password');
+    const token = await this.tokenProvider.generate({
+      subject: user.id,
+      type: 'forgot-password',
+    });
 
     await this.mailProvider.sendMail({
       to: [email],

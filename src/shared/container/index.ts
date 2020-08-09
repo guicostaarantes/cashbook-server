@@ -13,12 +13,14 @@ import JWTokenProvider from '../providers/TokenProvider/implementations/JWTokenP
 import HandlebarsTemplateProvider from '../providers/TemplateProvider/implementations/HandlebarsTemplateProvider';
 
 import { IUsersRepository } from '../../modules/users/repositories/users/IUsersRepository';
+import { ISessionsRepository } from '../../modules/users/repositories/sessions/ISessionsRepository';
 import { IAccountsRepository } from '../../modules/transactions/repositories/accounts/IAccountsRepository';
 import { ICounterpartsRepository } from '../../modules/transactions/repositories/counterparts/ICounterpartsRepository';
 import { ICategoriesRepository } from '../../modules/transactions/repositories/categories/ICategoriesRepository';
 import { ITransactionsRepository } from '../../modules/transactions/repositories/transactions/ITransactionsRepository';
 
 import PGUsersRepository from '../../modules/users/repositories/users/implementations/PGUsersRepository';
+import PGSessionsRepository from '../../modules/users/repositories/sessions/implementations/PGSessionsRepository';
 import PGAccountsRepository from '../../modules/transactions/repositories/accounts/implementations/PGAccountsRepository';
 import PGCounterpartsRepository from '../../modules/transactions/repositories/counterparts/implementations/PGCounterpartsRepository';
 import PGCategoriesRepository from '../../modules/transactions/repositories/categories/implementations/PGCategoriesRepository';
@@ -52,6 +54,10 @@ container.registerInstance<ITokenProvider>(
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   PGUsersRepository,
+);
+container.registerSingleton<ISessionsRepository>(
+  'SessionsRepository',
+  PGSessionsRepository,
 );
 container.registerSingleton<IAccountsRepository>(
   'AccountsRepository',
